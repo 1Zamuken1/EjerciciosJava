@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="herencia">
+  <ClassDiagramComponents>
+    <Class name="empleado" package="herencia" visibility="public" isAbstract="true" xPosition="79.0" yPosition="524.0">
+      <Fields>
+        <Field name="cedula" type="String" visibility="package"/>
+        <Field name="nombres" type="String" visibility="package"/>
+        <Field name="apellidos" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCedula" returnType="String" visibility="public"/>
+        <Method name="setCedula" returnType="void" visibility="public">
+          <Argument type="String" name="cedula"/>
+        </Method>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="String" name="nombres"/>
+        </Method>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="apellidos"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EmpleadoAsalariado" package="herencia" visibility="public" xPosition="-27.0" yPosition="96.0">
+      <Fields>
+        <Field name="salarioMensual" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="salarioMensual"/>
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSalarioMensual" returnType="double" visibility="public"/>
+        <Method name="setSalarioMensual" returnType="void" visibility="public">
+          <Argument type="double" name="salarioMensual"/>
+        </Method>
+        <Method name="ingresos" returnType="double" visibility="private"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EmpleadoBaseMasComision" package="herencia" visibility="public" xPosition="773.0" yPosition="689.0">
+      <Fields>
+        <Field name="salarioBase" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="salarioBase"/>
+          <Argument type="double" name="ventasBrutas"/>
+          <Argument type="double" name="tarifasComision"/>
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSalarioBase" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="setSalarioBase" returnType="void" visibility="public">
+          <Argument type="double" name="salarioBase"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmpleadoPorComision" package="herencia" visibility="public" xPosition="899.0" yPosition="402.0">
+      <Fields>
+        <Field name="ventasBrutas" type="double" visibility="private"/>
+        <Field name="tarifasComision" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="ventasBrutas"/>
+          <Argument type="double" name="tarifasComision"/>
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVentasBrutas" returnType="double" visibility="public"/>
+        <Method name="setVentasBrutas" returnType="void" visibility="public">
+          <Argument type="double" name="ventasBrutas"/>
+        </Method>
+        <Method name="getTarifasComision" returnType="double" visibility="public"/>
+        <Method name="setTarifasComision" returnType="void" visibility="public">
+          <Argument type="double" name="tarifasComision"/>
+        </Method>
+        <Method name="ingresos" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="settarifasComision" returnType="void" visibility="public">
+          <Argument type="double" name="tarifasComision"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EmpleadoporHoras" package="herencia" visibility="public" xPosition="647.0" yPosition="20.0">
+      <Fields>
+        <Field name="valorHora" type="double" visibility="private"/>
+        <Field name="numeroHoras" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="valorHora"/>
+          <Argument type="double" name="numeroHoras"/>
+          <Argument type="String" name="cedula"/>
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getValorHora" returnType="double" visibility="public"/>
+        <Method name="setValorHora" returnType="void" visibility="public">
+          <Argument type="double" name="valorHora"/>
+        </Method>
+        <Method name="getNumeroHoras" returnType="double" visibility="public"/>
+        <Method name="setNumeroHoras" returnType="void" visibility="public">
+          <Argument type="double" name="numeroHoras"/>
+        </Method>
+        <Method name="ingresos" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Herencias" package="herencia" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="jefe" package="herencia" visibility="public" isAbstract="true" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombres" type="String" visibility="private"/>
+        <Field name="apellidos" type="String" visibility="private"/>
+        <Field name="sucursal" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombres"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="sucursal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getNombres" returnType="String" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="String" name="nombres"/>
+        </Method>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="apellidos"/>
+        </Method>
+        <Method name="getSucursal" returnType="String" visibility="public"/>
+        <Method name="setSucursal" returnType="void" visibility="public">
+          <Argument type="String" name="sucursal"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="herencia.EmpleadoBaseMasComision" target="herencia.EmpleadoPorComision"/>
+    <IsRelation name="is" source="herencia.EmpleadoPorComision" target="herencia.empleado"/>
+    <IsRelation name="is" source="herencia.EmpleadoAsalariado" target="herencia.empleado"/>
+    <IsRelation name="is" source="herencia.EmpleadoporHoras" target="herencia.empleado"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
