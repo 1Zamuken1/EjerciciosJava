@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="diagramasuml">
+  <ClassDiagramComponents>
+    <Class name="Usuario" package="" visibility="public" xPosition="419.0" yPosition="19.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Id" returnType="void" visibility="public"/>
+        <Method name="Nombre" returnType="void" visibility="public"/>
+        <Method name="Papellido" returnType="void" visibility="public"/>
+        <Method name="Sapellido" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Instructor" package="" visibility="public" xPosition="27.0" yPosition="303.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Fingreso" returnType="void" visibility="public"/>
+        <Method name="Fmatricula" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Aprendiz" package="" visibility="public" xPosition="419.0" yPosition="315.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Id" returnType="void" visibility="public"/>
+        <Method name="Nombre" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Acudiente" package="" visibility="public" xPosition="707.0" yPosition="278.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Id" returnType="Void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Notas" package="" visibility="public" xPosition="416.0" yPosition="570.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Id" returnType="void" visibility="public"/>
+        <Method name="Promedio" returnType="void" visibility="public"/>
+        <Method name="CedulaPromedio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Administrador" package="" visibility="public" xPosition="958.0" yPosition="92.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Id" returnType="void" visibility="public"/>
+        <Method name="borrarUsuario" returnType="void" visibility="public"/>
+        <Method name="agregarUsuario" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Noticias" package="" visibility="public" xPosition="1023.0" yPosition="431.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="PublicarNoticia" returnType="void" visibility="public"/>
+        <Method name="EliminarNoticia" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Instructor" target="Usuario"/>
+    <HasRelation name="Acudiente-Aprendiz" source="Acudiente" target="Aprendiz" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Admin-usuario" source="Administrador" target="Usuario" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Aprendiz-notas" source="Aprendiz" target="Notas" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Acudiente" target="Usuario"/>
+    <HasRelation name="Administrador-Noticias" source="Administrador" target="Noticias" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Aprendiz" target="Usuario"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

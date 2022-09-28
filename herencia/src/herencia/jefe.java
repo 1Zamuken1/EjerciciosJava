@@ -1,8 +1,11 @@
 package herencia;
 
 public abstract class jefe {
+
     private String nombres;
+
     private String apellidos;
+
     private String sucursal;
 
     @Override
@@ -39,13 +42,4 @@ public abstract class jefe {
         this.apellidos = apellidos;
         this.sucursal = sucursal;
     }
-    
 }
-
-/* 
-Alt + Insert
-1. Generate constructor
-2. Getter and Setter
-3. to String()
-*/
-
